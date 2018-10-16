@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+#question {
+    background-color: lightblue;
+}
+
+#question, #answers > * {
+    padding: 20px;
+}
