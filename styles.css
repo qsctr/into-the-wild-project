@@ -12,6 +12,6 @@ body {
     background-color: lightblue;
 }
 
-#question, #answers > * {
+#question, #choices > * {
     padding: 20px;
 }
