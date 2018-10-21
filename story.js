@@ -176,7 +176,7 @@ const story = {
         q: 'You have been enlightened. You repeat Tolstoy\'s quote: "I have lived through much, and now I think I have found what is needed for happiness." You believe your Alaskan Odyssey has accomplished its purpose. Is it time to head home?',
         a: {
             'Pack and head home': 'rushingRiver',
-            'Stay in Alaska': 'day'
+            'Stay in Alaska': 'day78'
         }
     },
     'rushingRiver': {
@@ -185,16 +185,106 @@ const story = {
             'Try to swim across the river': 'crossRushingRiver',
             'Follow the river upstream': 'upstream',
             'Follow the river downstream': 'downstream',
-            'Return to the bus': 'day'
+            'Return to the bus': 'day78'
         }
     },
     'crossRushingRiver': {
         q: 'You jump into the freezing, raging river. The current gobbles you in its wake. You flail your arms wildly trying to keep afloat. Water gushes down your lungs as you attempt to gasp for air. You realize your struggle is futile. You thank the Lord one last time as you are carried downstream.'
     },
-    'upstream': {
-        q: 'You walk along the river upstream, and about one mile later you come across a place where the river is shallower and spread out into multiple channels. You find a suitable place to cross the river.',
+    'downstream': {
+        q: 'Something sits at the side of the riverbank. You walk over to find a basket connected to a steel cable spanning the gorge. You jump in joy as the basket fortunately is on your side of the canyon. You hop into the basket and slide over the canyon.',
         a: {
-            'Cross the river': ''
+            'Continue': 'win',
         }
-    }
+    },
+    'upstream': {
+        q: 'You walk along the river upstream, and about one mile later you come across a place where the river is shallower and spread out into multiple channels. You find what seems to be a suitable place to cross the river. The water is only chest-deep.',
+        a: {
+            'Wade across the river': 'drown',
+            'dog-paddle across': 'passRiver'
+        }
+    },
+    'drown': {
+        q: 'You enter the freezing, raging river. The current sweeps under your feet, knocking you over. Panic engulfs you. You flail your arms wildly trying to keep afloat, but your efforts are futile. You thank the Lord one last time as you are carried downstream.',
+    },
+    'passRiver': {
+        q: 'You dogpaddle across the river as you are slowly taken downstream. Luckily, you reach the other side before you succumb to hypothermia. You joyfully lift yourself out of the river and began the walk back to society.',
+        a: {
+            'Continue': 'win',
+        }
+    },  
+    'win': {
+        q: 'You proudly stand hands akimbo as you stand in front of the Fairbanks community. The look on Jim Gallien\'s face is priceless. He was almost sure that you were going to die in the wild. You share your experiences and what you have learned. Your life goal is complete.',
+        a: {
+            'Continue': 'win2',
+        }
+    }, 
+    'win2': {
+        q: 'Congratulations! You have survived into the wild.',
+    },    
+
+    'day78': {
+        q: 'You have returned to the bus for a few days now. Your hunting continues as usual, but there seems to be less and less prey. You shot at a wolf today, but you missed. You have collected a lot of potato seeds though and you hope that will sustain you.',
+        a: {
+            'Continue': 'day79'
+        }
+    },
+    'day79': {
+        q: 'It is pouring outside, and there is not much to do. You look at the two books you have not fully finished reading yet: Tanaina Plantlore and Dr. Zhivago. The first book describes edible Alaskan plants and the second describes dozens of characters between the Russian Revolution and World War II.',
+        a: {
+            'Continue to study tanaina plantlore': 'day92',
+            'Read Dr. Zhivago': 'day92',
+        }
+    },
+    'day92': {
+        q: 'Your stomach growls. You have not eaten in several days. You look to the pots of seeds that you have collected. What do you do?',
+        a: {
+            'Eat the seeds': 'day94',
+            'Don\'t eat the seeds': 'day100'
+        }
+    },
+    'day94': {
+        q: 'You feel as if your soul is dying. You place your hand to support yourself, but you collapse onto the floor. You are too weak to move, and you are starving.',
+        a: {
+            'Rest': 'day100'
+        }
+    },
+    'day100': {
+        q: 'Day 100! You made it! But you are in the weakest condition of life. Death constantly looms over you, ready to strike at any moment. You write in your journal: "Too weak to walk out, have literally become trapped in the wild". ',
+        a: {
+            'Continue': 'day104'
+        }
+    },
+    'day104': {
+        q: 'A bear crawls outside your bus. You manage to go outside with your rifle. What do you do?',
+        a: {
+            'Shoot the bear in the forehead': 'bearDeath',
+            'Shoot the bear in the chest': 'missBear',
+            'Hide in the bus': 'day113',
+        }
+    },
+    'bearDeath': {
+        q: 'You take your aim. BANG! The bullet hits the bear\'s forehead straight on. The bear is stunned for a second, but is unfazed by the bullet. The bear turns towards your direction. You suddenly remember that a .22 caliber is not strong enough to penetrate bear skull.',
+        a: {
+            'Continue': 'bearDeath2'
+        }
+    },
+    'bearDeath2': {
+        q: 'The bear charges towards you and you close your eyes. "I thank the lord for my life and may God bless us all" you think, as you feel the weight of the bear crush you.',
+    },
+    'missBear': {
+        q: 'You take your aim. BANG! Due to your fatigue, you missed the bear. You put the gun down and return to the bus.',
+        a: {
+            'Continue': 'day113',
+        }
+    },
+    'day113': {
+        q: 'You realize this is the end. Your Alaskan Journey had started three months ago, but now it is coming to a close. Tears roll down your cheek. You get up to write complete one final task.',
+        a: {
+            'Write last entry for your journal': 'day113part2',
+        }
+    },
+    'day113part2': {
+        q: 'The pen trembles in your hand. "This may be my last entry. I cannot move... To Ron- I would\'ve love, for your sake, to have the chance to act as an adopted son to you...To Jane and Bob- Thank you a million times... To my family-Do not grieve over my demise. Celebrate my existence...I love each of you... Goodbye and may God bless all." You stare up into the beautiful Alaskan sky one last time.',
+    },
 };
