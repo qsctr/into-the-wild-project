@@ -214,14 +214,14 @@ const story = {
         }
     },  
     'win': {
-        q: 'You proudly stand hands akimbo as you stand in front of the Fairbanks community. The look on Jim Gallien\'s face is priceless. He was almost sure that you were going to die in the wild. You share your experiences and what you have learned. Your life goal is complete.',
+        q: 'You proudly stand with arms akimbo in front of the Fairbanks community. The looks on their faces were priceless. They were almost sure that you were going to die in the wild. You share your experiences and what you have learned. Your life goal is complete.',
         a: {
             'Continue': 'win2',
         }
-    }, 
+    },
     'win2': {
-        q: 'Congratulations! You have survived into the wild.',
-    },    
+        q: 'Congratulations! You have survived Into the Wild.',
+    },
 
     'day78': {
         q: 'You have returned to the bus for a few days now. Your hunting continues as usual, but there seems to be less and less prey. You shot at a wolf today, but you missed. You have collected a lot of potato seeds though and you hope that will sustain you.',
