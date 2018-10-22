@@ -240,11 +240,11 @@ const story = {
         q: 'Your stomach growls. You have not eaten in several days. You look to the pots of seeds that you have collected. What do you do?',
         a: {
             'Eat the seeds': 'day94',
-            'Don\'t eat the seeds': 'day100'
+            'Don\'t eat the seeds': 'no seeds'
         }
     },
     'day94': {
-        q: 'You feel as if your soul is dying. You place your hand to support yourself, but you collapse onto the floor. You are too weak to move, and you are starving.',
+        q: 'You feel as if your soul is dying. You place your hand to support yourself, but you collapse onto the floor. You are too weak to move, and you are starving. You think you have been poisoned by eating the seeds.',
         a: {
             'Rest': 'day100'
         }
@@ -287,4 +287,47 @@ const story = {
     'day113part2': {
         q: 'The pen trembles in your hand. "This may be my last entry. I cannot move... To Ron- I would\'ve love, for your sake, to have the chance to act as an adopted son to you...To Jane and Bob- Thank you a million times... To my family-Do not grieve over my demise. Celebrate my existence...I love each of you... Goodbye and may God bless all." You stare up into the beautiful Alaskan sky one last time.',
     },
+    'no seeds': {
+        q: 'You decide not to eat the seeds, but they seem more and more tempting as time goes on. They are your only food source as there is less wildlife to hunt in this time of year.',
+        a: {
+            'Eat the seeds': 'day94',
+            'Still don\'t eat the seeds': 'no seeds 2'
+        }
+    },
+    'no seeds 2': {
+        q: 'You are starving, but you manage to hunt down a ptarmigan. You survive for a few more days.',
+        a: {
+            'Continue': 'day104v2'
+        }
+    },
+    'day104v2': {
+        q: 'A bear crawls outside your bus. You manage to go outside with your rifle. What do you do?',
+        a: {
+            'Shoot the bear in the forehead': 'bearDeath',
+            'Shoot the bear in the chest': 'missBearv2',
+            'Hide in the bus': 'no seeds 3',
+        }
+    },
+    'missBearv2': {
+        q: 'You take your aim. BANG! Due to your fatigue, you missed the bear. You put the gun down and return to the bus.',
+        a: {
+            'Continue': 'no seeds 3',
+        }
+    },
+    'no seeds 3': {
+        q: 'You are starving to death. You lie in the bus, with too little energy to go outside and hunt. You await your death. Are you sure you don\'t want to eat the seeds?',
+        a: {
+            'Eat the seeds': 'seedsv2',
+            'Continue': 'no seeds 4'
+        }
+    },
+    'seedsv2': {
+        q: 'You feel even weaker after eating the seeds. You realize that the seeds have poisoned you. Normally this would not do much to a healthy person, but you are already starving to death, so the consequences for you are severe.',
+        a: {
+            'Continue': 'day113'
+        }
+    },
+    'no seeds 4': {
+        q: 'You hear noises outside of people talking. You have not been in contact with other humans for months. You manage to raise your head just in time to catch a glipse of two hunters outside the window of the bus. They see you and come into the bus. You praise the Lord. You are saved. You swear to yourself to never come to Alaska ever again.'
+    }
 };
