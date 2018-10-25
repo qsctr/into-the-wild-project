@@ -116,7 +116,7 @@ const story = {
         }
     },
     'day43part2': {
-        q: 'The moose falls to the ground. You gleefully hop over at the dead corpse. You take a small chunk of meat back to the bus to eat it. You realize that there is enough meat left on the moose to feed you for weeks. What will you do with the rest of the moose?',
+        q: 'The moose falls to the ground. You gleefully hop over the dead corpse. You take a small chunk of meat back to the bus to eat it. You realize that there is enough meat left on the moose to feed you for weeks. What will you do with the rest of the moose?',
         a: {
             'Leave the dead moose where it died': 'leaveMoose',
             'Drag the moose back to your camp and leave it outside the bus': 'rottenMoose1',
